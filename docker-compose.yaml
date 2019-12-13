@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  jattach:
+    build: 
+      context: jattach
+      dockerfile: Dockerfile
+  async-profiler:
+    build: 
+      context: async-profiler
+      dockerfile: Dockerfile
