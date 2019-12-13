@@ -1,0 +1,4 @@
+FROM openjdk:11-stretch
+RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
+RUN apt update && apt install -y cmake g++  openjdk-11-dbg
+RUN git clone --depth=1 https://github.com/jvm-profiling-tools/async-profiler /async-profiler && cd /async-profiler && make
